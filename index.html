@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Mostafa Ibrahem Farrouh - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .profile-icon {
+            background: rgba(255,255,255,0.2);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+        
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .profile-info p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .contact-item i {
+            color: #64b5f6;
+            font-size: 1.1rem;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+        }
+        
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2 i {
+            color: #3498db;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .experience-company {
+            font-size: 1.1rem;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .experience-duration {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .experience-location {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .experience-description ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        .experience-description li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .experience-description li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+        
+        .courses {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 3px solid #27ae60;
+        }
+        
+        .courses h4 {
+            color: #27ae60;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .courses ul {
+            padding-left: 20px;
+        }
+        
+        .education-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .education-degree {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #bbdefb;
+        }
+        
+        .education-degree h3 {
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill-tag {
+            background: #e1f5fe;
+            padding: 8px 12px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #0288d1;
+            font-weight: 500;
+        }
+        
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .personal-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .personal-item:last-child {
+            border-bottom: none;
+        }
+        
+        .personal-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .personal-value {
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .strength-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .strength-item i {
+            color: #27ae60;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        
+        .strength-text {
+            color: #7f8c8d;
+        }
+        
+        .note {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #ffc107;
+            font-style: italic;
+            color: #5d4037;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 25px;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-section">
+                <div class="profile-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <h1>Mohammed Mostafa Ibrahem Farrouh</h1>
+                    <p>Biomedical Engineering Professional</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>01287066651, 01158820045</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>bio_eng_farrouh2006@hotmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rabaa El Adaweya, Nasr city, Cairo, Egypt</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>20th September, 1977</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Career Objective -->
+        <div class="section">
+            <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
+            <p>Seeking a challenging career in the field of Biomedical Engineering & Electronics technology. I would also like to join a well-established and team oriented organization that provides growth opportunities for highly motivated individuals.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="education-content">
+                <div class="education-degree">
+                    <h3>B.Sc. Engineering - Biomedical Engineering</h3>
+                    <p><strong>Grade:</strong> Good</p>
+                </div>
+                <div>
+                    <h4>Computer Skills</h4>
+                    <div class="skills-grid">
+                        <div class="skill-tag">Windows</div>
+                        <div class="skill-tag">Excel</div>
+                        <div class="skill-tag">PowerPoint</div>
+                        <div class="skill-tag">Internet</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Languages Known</h4>
+                    <p>English, Very Good (Speaking & Writing)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Biomedical Manager</div>
+                        <div class="experience-company">Al-Watany Eye Hospital</div>
+                    </div>
+                    <div class="experience-duration">Jan 1st, 2023 - Present</div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Biomedical Manager</div>
+                        <div class="experience-company">Al-Azhar Specialized Hospital</div>
+                    </div>
+                    <div class="experience-duration">Dec, 2020 - Dec, 2021</div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Biomedical Manager</div>
+                        <div class="experience-company">Dar Al Fouad Hospital (Nasr City)</div>
+                    </div>
+                    <div class="experience-duration">May, 2019 - May, 2020</div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Biomedical Deputy Manager</div>
+                        <div class="experience-company">International Medical Consultants</div>
+                    </div>
+                    <div class="experience-duration">Dec 1, 2014 - Apr 18, 2019</div>
+                </div>
+                <div class="experience-location">International Medical Center (Egypt) O&M Project, Cairo/Ismailia Desert Rd.</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Group leader for radiology department</li>
+                        <li>Studying, analyzing and evaluating the vendors technical offers</li>
+                        <li>Preparation of tenders technical reports</li>
+                        <li>Preparation of the equipment submittal sheets for the equipment delivery inspection</li>
+                        <li>Working with project managers and contractors on site requirements and preparation of equipment installation (ICU, NICU, OR, INPATIENT, RADIOLOGY.....)</li>
+                        <li>Participated in JCI accreditation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Field Service Engineer (X-ray)</div>
+                        <div class="experience-company">GE Healthcare, Saudi Arabia</div>
+                    </div>
+                    <div class="experience-duration">May 1, 2012 - Sept 30, 2014</div>
+                </div>
+                <div class="experience-location">Saudi Arabia</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Installed 18 digital rad systems (Discovery XR656)</li>
+                        <li>Installed 15 mobile X-Ray (Optima XR220amx)</li>
+                        <li>Installed 5 C-arm (OEC9900)</li>
+                        <li>Working with project managers and contractors on site requirements and preparation of equipment installation</li>
+                        <li>Inspection of delivered equipment specifications, supplies and accessories according to the submittal sheet</li>
+                        <li>Implementation, supervising and monitoring the equipment installation process</li>
+                        <li>Testing and commissioning the installed equipment</li>
+                    </ul>
+                </div>
+                <div class="courses">
+                    <h4>Technical Courses:</h4>
+                    <ul>
+                        <li.XR Basic service, Oct. 8-18, 2012 (USA)</li>
+                        <li.AMX-4 full service (Mobile), Oct. 22-24, 2012 (USA)</li>
+                        <li.Definium AMX 700 full service (Mobile), Oct. 25-26, 2012 (USA)</li>
+                        <li.XR Digital Rad Systems Full Service, Nov. 18-22, 2013 (USA)</li>
+                        <li.SuperBee-Optima XR220amx/XR200amx & Brivo XR285 full Service (Mobile), Feb. 25-28, 2014 (Hungary)</li>
+                        <li.OEC 9800 full Technical Training course (C-Arm), Mar. 10-21, 2014 (USA)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Field Service Engineer</div>
+                        <div class="experience-company">Attieh Medico</div>
+                    </div>
+                    <div class="experience-duration">Jan 2, 2009 - Feb 29, 2012</div>
+                </div>
+                <div class="experience-location">Riyadh, Saudi Arabia</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Linear accelerator + CT (compact system), brand tomotherapy</li>
+                    </ul>
+                </div>
+                <div class="courses">
+                    <h4>Technical Courses:</h4>
+                    <ul>
+                        <li>Trained on Hi Art System: Aug 17 - Sep 20, 2008, Wisconsin, USA</li>
+                        <li>Trained on Hi Art System: Nov 18 - Dec 20, 2008, Wisconsin, USA</li>
+                        <li>Hands on training in Belgium: Jan 20-30, 2009</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Biomedical Engineer</div>
+                        <div class="experience-company">BMAR & Associates</div>
+                    </div>
+                    <div class="experience-duration">Sept 22, 2005 - June 21, 2008</div>
+                </div>
+                <div class="experience-location">International Medical Center (Egypt) O&M Project, Cairo/Ismailia Desert Rd.</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Radiation therapy (linear accelerator, Varian)</li>
+                        <li>X-Ray modalities: Conventional radiography (GE), Mobile X-Ray (GE), C-Arm (GE), Interventional radiography (GE), Fluoroscopy (GE)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Biomedical Engineer</div>
+                        <div class="experience-company">Washington International, Inc.</div>
+                    </div>
+                    <div class="experience-duration">Jan 27, 2004 - Sept 21, 2005</div>
+                </div>
+                <div class="experience-location">International Medical Center (Egypt) O&M Project, Cairo/Ismailia Desert Rd.</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Sterilization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Technical Support Engineer</div>
+                        <div class="experience-company">Ghalioungui & Associates</div>
+                    </div>
+                    <div class="experience-duration">Nov 2, 2002 - Sept 25, 2003</div>
+                </div>
+                <div class="experience-location">Egypt</div>
+                <div class="experience-description">
+                    <ul>
+                        <li>ECG Devices (Schiller)</li>
+                        <li>Defibrillators (Schiller)</li>
+                        <li>Cardiac Monitors (Schiller)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Profile -->
+        <div class="section">
+            <h2><i class="fas fa-user-circle"></i> Personal Profile</h2>
+            <div class="personal-grid">
+                <div class="personal-item">
+                    <span class="personal-label">Date of Birth:</span>
+                    <span class="personal-value">20th September, 1977</span>
+                </div>
+                <div class="personal-item">
+                    <span class="personal-label">Nationality:</span>
+                    <span class="personal-value">Egyptian</span>
+                </div>
+                <div class="personal-item">
+                    <span class="personal-label">Marital Status:</span>
+                    <span class="personal-value">Married</span>
+                </div>
+                <div class="personal-item">
+                    <span class="personal-label">Military Status:</span>
+                    <span class="personal-value">Exempted</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strengths -->
+        <div class="section">
+            <h2><i class="fas fa-star"></i> Strengths</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Proactive</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Takes initiative</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Works well without supervision</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Identifies problems and solutions</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Takes action before issues arise</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Takes responsibility</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Self-confident</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Positive thinking</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Independent</span>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="strength-text">Leadership ability</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Note -->
+        <div class="note">
+            References & Certificates available upon request.
+        </div>
+    </div>
+</body>
+</html>
+
